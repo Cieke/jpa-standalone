@@ -23,7 +23,8 @@ public abstract class DataSetPersistenceTest extends PersistenceTest {
         IDataSet dataSet = new FlatXmlDataSetBuilder().build(getClass().getResource("/data.xml"));
 
         IDatabaseConnection connection = new DatabaseConnection(newConnection());
-        connection.getConfig().setProperty(DatabaseConfig.PROPERTY_DATATYPE_FACTORY, new MySqlDataTypeFactory()); // Set factorytype in dbconfig to remove warning
+        connection.getConfig().setProperty(DatabaseConfig.PROPERTY_DATATYPE_FACTORY, new MySqlDataTypeFactory());
+        // Set factorytype in dbconfig to remove warning
         DatabaseOperation.CLEAN_INSERT.execute(connection, dataSet);
         connection.close();
     }
