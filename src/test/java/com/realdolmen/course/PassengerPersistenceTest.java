@@ -22,7 +22,7 @@ public class PassengerPersistenceTest extends DataSetPersistenceTest {
     public void passengerCanBePersisted() throws Exception {
 
 
-        Passenger passenger = new Passenger(1000, "bla","bla","bla", 131354);
+        Passenger passenger = new Passenger(1000, "bla","bla","bla", 131354, LocalDate.of(2006,2,23));
         entityManager().persist(passenger);
         assertNotNull(passenger.getId());
     }

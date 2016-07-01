@@ -2,6 +2,7 @@ package com.realdolmen.course.domain;
 
 import javax.persistence.*;
 import java.sql.Date;
+import java.time.LocalDate;
 
 /**
  * Created by tywinlannister on 30/06/16.
@@ -21,7 +22,7 @@ public class Passenger {
 
     //@Temporal(TemporalType.DATE)
     @Column (nullable = false)
-    private Date dateOfBirth;
+    private LocalDate dateOfBirth;
 
     protected Passenger() {     //default constructor
     }
@@ -54,11 +55,11 @@ public class Passenger {
         return id;
     }
 
-    public Date getDateOfBirth() {
+    public LocalDate getDateOfBirth() {
         return dateOfBirth;
     }
 
-    public void setDateOfBirth(Date dateOfBirth) {
+    public void setDateOfBirth(LocalDate dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 
@@ -82,7 +83,7 @@ public class Passenger {
         return frequentFlyerMiles;
     }
 
-    public Passenger(Integer id, String firstName, String lastName, String ssn, Integer frequentFlyerMiles) {
+    public Passenger(Integer id, String firstName, String lastName, String ssn, Integer frequentFlyerMiles, LocalDate dateOfBirth) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
