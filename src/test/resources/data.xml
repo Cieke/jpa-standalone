@@ -3,8 +3,11 @@
     <book id="2000" author="Aldous Huxley" title="Brave New World" genre="fiction"/>
     <book id="3000" author="Bram Stoker" title="Dracula" genre="fiction"/>
 
-    <passenger id="10000" ssn="12548" firstName="Hayley" lastName="last" frequentFlyerMiles="13256584" dateOfBirth="2006-02-23" />
+    <passenger id="10000" ssn="12548" firstName="Hayley" lastName="last" frequentFlyerMiles="13256584" dateOfBirth="2006-02-23" PassengerType="OCCASIONAL"/>
     <passenger id="5000" ssn="1254dfdf8" firstName="Haily" lastName="bla" frequentFlyerMiles="12545" dateOfBirth="2007-03-24"/>
     <passenger id="1234" ssn="1dfdf2548" firstName="Blake" lastName="blie" frequentFlyerMiles="215454" dateOfBirth="2008-02-23"/>
     <passenger id="12345" ssn="1dfdf255646" firstName="Blakey" lastName="blie" frequentFlyerMiles="215454" dateOfBirth="2009-02-23"/>
+
+    <ticket ticketID="212144" price="20,15"/>
+
 </dataset>

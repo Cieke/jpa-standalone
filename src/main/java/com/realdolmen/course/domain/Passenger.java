@@ -24,6 +24,9 @@ public class Passenger {
     @Column (nullable = false)
     private LocalDate dateOfBirth;
 
+    @Enumerated(EnumType.STRING)
+    private PassengerType passengerType;
+
     protected Passenger() {     //default constructor
     }
 
@@ -78,18 +81,27 @@ public class Passenger {
         return age;
     }
 
+    public PassengerType getPassengerType() {
+        return passengerType;
+    }
+
+    public void setPassengerType(PassengerType passengerType) {
+        this.passengerType = passengerType;
+    }
 
     public Integer getFrequentFlyerMiles() {
         return frequentFlyerMiles;
     }
 
-    public Passenger(Integer id, String firstName, String lastName, String ssn, Integer frequentFlyerMiles, LocalDate dateOfBirth) {
+    public Passenger(Integer id, String firstName, String lastName, String ssn, Integer frequentFlyerMiles, LocalDate dateOfBirth, PassengerType passengerType) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.ssn = ssn;
         this.frequentFlyerMiles = frequentFlyerMiles;
         this.dateOfBirth = dateOfBirth;
+        this.passengerType = passengerType;
+
 
     }
 
